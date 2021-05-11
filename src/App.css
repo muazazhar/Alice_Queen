@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+.sky {
+  flex: 1;
+  background: #246e89
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_sky.jpg") repeat-x
+    100% 100% / auto 100%;
+  top: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.earth {
+  flex: 1;
+  background: #eb125d
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_earth.jpg")
+    repeat-x 0 0 / 100% auto;
+  bottom: 0;
+}
+.scenery {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+#palm1 {
+  position: absolute;
+  left: 35%;
+  top: -43%;
+}
+#pawn1 {
+  position: absolute;
+  left: 20%;
+  top: -38%;
+}
+#rook1 {
+  position: absolute;
+  right: 15%;
+  top: -13%;
+}
+#alice_queen {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  /* max-width: 450px;
+  width: 80%; */
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
